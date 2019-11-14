@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //tạo mảng.
+        let numArr = [];
+        for (let i = 0; i < 10; i++) {
+            numArr[i] = Math.floor(Math.random() * 20 + 1); // random giá trị các phần tử  từ 0 đến 20.
+        }
+
+        document.write('Array is :' + numArr + '<br>');
+
+        let numV = +prompt('input interger V :');
+
+        //so sánh số V với gtri ptử của mảng.
+        for (let i = 0; i < 10; i++) {
+            if (numV === numArr[i]) {
+                for (let j = i; j < 10; j++) {
+                    numArr[j] = numArr[j + 1]; //dịch phần tử ở bên phải V sang vị trí của V.
+                }
+                numArr[9] = 0 //gán 0 cho phần tử cuối cùng của mảng
+            }
+        }
+        document.write('New array is : ' + numArr);
+    </script>
+</body>
+
+</html>

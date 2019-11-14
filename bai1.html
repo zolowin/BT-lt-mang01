@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let numArr = new Array();
+        let cnt = 0;
+        for (let i = 0; i < 10; i++) {
+            numArr[i] = Math.floor(Math.random() * 20 + 1);
+            if (numArr[i] >= 10) {
+                cnt += 1;
+                let b = numArr[i];
+                document.write(b + ', ');
+
+            }
+        }
+        document.write('is intergers > 10. Total is : ' + cnt + ' numbers')
+
+    </script>
+</body>
+
+</html>

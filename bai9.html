@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            //tạo 2 mảng a và b.
+            let arrA = [];
+            let arrB = [];
+            for (let i = 0; i < 10; i++) {
+                arrA[i] = Math.floor(Math.random() * 100 + 1);
+                arrB[i] = Math.floor(Math.random() * 100 + 1);
+            }
+            console.log(arrA + '<br>');
+            console.log(arrB);
+
+            //nối 2 mảng a và b.
+            let arrC = [];
+            arrC = arrA.concat(arrB);
+            document.write('New array is :' + arrC);
+        </script>
+    </body>
+
+    </html>
+</body>
+
+</html>

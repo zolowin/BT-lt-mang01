@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // tạo mảng có giá trị các phần tử từ 0 đến 20.
+        let numArr = [];
+        for (let i = 0; i < 10; i++) {
+            numArr[i] = Math.floor(Math.random() * 20 + 1);
+        }
+        console.log(numArr);
+
+        let numV = +prompt('input interger V :'); // nhập số nguyên V.
+
+        let inArray = false;                       //gắn biến inArray có kiểu boolean giá trị là false.
+
+        //so sánh giá trị của số V với các phần tử trong mảng.
+        for (let j = 0; j < 10; j++) {
+            if (numV === numArr[j]) {
+                inArray = true;
+                break;
+            }
+        }
+
+        // xuất màn hình theo các giá trị của inArray.
+        if (inArray === true) {
+            alert('V is in the array');
+        } else {
+            alert('V is not in the array');
+        }
+
+    </script>
+</body>
+
+</html>

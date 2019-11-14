@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let arr = new Array();
+        // let size = +prompt('The elements of sequence is :')
+        // // let n=+prompt('intput limit of sequence :')
+        // let sum=0;
+
+        // for (let i = 0; i < size; i++) {
+        //     arr[i] = Math.floor(Math.random() * 100 + 1);
+        //     sum +=arr[i];
+        // }
+
+        // document.write( "dãy số random là: "+ arr+ '<br>');
+        // let max = arr[0];
+        // for(let j=1;j<arr.length;j++){
+        //     if(arr[j]>max){
+        //         max=arr[j];
+        //     }
+        // }
+
+
+        // let avg = sum/size;
+        // document.write('trung bình cộng của dãy số là :' +avg+ '<br>');
+        // document.write('giá trị lớn nhất là : '+max);
+
+
+
+
+        function creatArray(elements) {
+            let arr = [];
+            for (let i = 0; i < elements; i++) {
+                let num = Math.floor(Math.random() * 100 + 1);
+                arr.push(num);
+            }
+            return arr;
+        }
+
+        function sumArray(arr) {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            return sum;
+        }
+
+        let elements = +prompt('Input elements of sequence : ')
+        let arr = creatArray(elements);
+        document.write('Mảng đã tạo: ' + arr + '<br>');
+
+        let sum = sumArray(arr);
+
+        function maxOfArray(arr) {
+            let max = arr[0];
+            for (let j = 0; j < elements; j++) {
+                if (arr[j] > max) {
+                    max = arr[j];
+                }
+            }
+            return max;
+        }
+
+        let max = maxOfArray(arr);
+
+        document.write('Max of max: ' + max + '<br>');
+
+        console.log(sum);
+        function average(sum, length) {
+            let avg = sum / length;
+            return avg;
+        }
+
+        let avg = average(sum, elements);
+        document.write('AVG of arr is: ' + avg);
+    </script>
+</body>
+
+</html>

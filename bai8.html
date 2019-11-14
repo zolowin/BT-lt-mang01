@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //tạo dãy số có giá trị cá phần tử từ 0 đến 1000.
+        let arrNum = [];
+        for (let i = 0; i < 10; i++) {
+            arrNum[i] = Math.floor(Math.random() * 1000 + 1);
+        }
+
+        // xếp các phần tử theo giá trị giảm dần.
+        arrNum.sort(function (a, b) {
+            return b - a;
+        })
+        document.write('Descending number sequences is :' + arrNum)
+    </script>
+</body>
+
+</html>
